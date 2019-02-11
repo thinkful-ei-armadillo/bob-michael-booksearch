@@ -1,9 +1,8 @@
-import React, {Component} from 'react'
-//title = author = description = price = 
+import React, { Component } from 'react';
 
 class Book extends Component {
 
-  render(){
+  render() {
     return (
       <li>
         <p>{this.props.title}</p>
