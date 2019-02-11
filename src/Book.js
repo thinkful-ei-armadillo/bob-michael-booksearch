@@ -1,5 +1,4 @@
-import React, {Component} from 'react'
-//title = author = description = price = 
+import React, {Component} from 'react';
 
 class Book extends Component {
 
