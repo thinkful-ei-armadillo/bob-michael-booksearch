@@ -10,12 +10,12 @@ class App extends Component {
       books: [],
       search: '',
       printType: 'all',
-      bookType: ''
+      bookType: 'partial'
     }
   }
 
   handleSearch = query => {
-    fetch(`https://www.googleapis.com/books/v1/volumes?q=${this.state.search}?printType=${this.state.printType}?filter=${this.state.bookType}`)
+    fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}&printType=${this.state.printType}&filter=${this.state.bookType}`)
       .then(res => res.json())
       .then(books => this.setState({
         search: query,
@@ -24,7 +24,7 @@ class App extends Component {
   }
 
   handlePrintType = printType =>{
-    fetch(`https://www.googleapis.com/books/v1/volumes?q=${this.state.search}?printType=${this.state.printType}?filter=${this.state.bookType}`)
+    fetch(`https://www.googleapis.com/books/v1/volumes?q=${this.state.search}&printType=${printType}&filter=${this.state.bookType}`)
       .then(res => res.json())
       .then(books => this.setState({
         printType: printType,
@@ -33,7 +33,7 @@ class App extends Component {
   }
 
   handleBookType = bookType =>{
-    fetch(`https://www.googleapis.com/books/v1/volumes?q=${this.state.search}?printType=${this.state.printType}?filter=${this.state.bookType}`)
+    fetch(`https://www.googleapis.com/books/v1/volumes?q=${this.state.search}&printType=${this.state.printType}&filter=${bookType}`)
       .then(res => res.json())
       .then(books => this.setState({
         bookType: bookType,

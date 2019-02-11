@@ -39,12 +39,12 @@ class Header extends Component {
           </select>
           <label for="bookType"> Book Type: </label>
           <select id='bType' name="bookType" onChange={event => this.handleChangeBookType(event)}>
-            <option value="">No Filter</option>
+            {/* <option value="">No Filter</option> */}
+            <option value="partial">Partial</option>
             <option value="ebooks">eBooks</option>
             <option value="free-ebooks">Free eBook</option>
             <option value="paid-ebooks">Paid eBooks</option>
             <option value="full">Full</option>
-            <option value="partial">Partial</option>
           </select>
         </form>
       </header>

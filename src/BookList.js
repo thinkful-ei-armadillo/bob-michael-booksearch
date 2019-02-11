@@ -7,7 +7,7 @@ class BookList extends Component {
     return (
       this.props.books.map((book) => {
         return <Book
-          // image={book.volumeInfo.imageLinks.thumbnail}
+          image={book.volumeInfo.imageLinks.thumbnail}
           title={book.volumeInfo.title}
           author={book.volumeInfo.authors}
           description={book.volumeInfo.description}
